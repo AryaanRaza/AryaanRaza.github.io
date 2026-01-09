@@ -1,0 +1,180 @@
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e5e7eb;
+  --accent: #38bdf8;
+  --card-hover: #233b5e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  color: var(--accent);
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--accent);
+  text-decoration: underline double;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.card {
+  background-color: var(--card);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.skill {
+  flex: 0 0 calc(33.333% - 1.5rem);
+  /* background: #334155; */
+  background: #020617;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  border: 2px solid var(--accent);
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* background-color: #020617;
+  padding: 1rem;
+  border-radius: 25rem;
+  border-color: #38bdf8;
+  text-align: center;
+  font-weight: bold; */
+}
+
+.skill:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-tran {
+  border: 1px solid #334155;
+  box-shadow: 0px 8px 8px #145976;
+  /* This makes the movement smooth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease #0d3b4e;
+  margin-top: 1rem;
+}
+
+/* The Hover Effect you liked */
+.card-tran:hover {
+  transform: translateX(10px) translateY(-10px);
+  background: var(--card-hover);
+  box-shadow: 0px 10px 25px #38bdf8;
+}
+
+.mt {
+  margin-top: 0.8rem;
+}
+
+.note {
+  margin-top: 5rem;
+}
+.card h3 {
+  margin-top: 0;
+  color: var(--accent);
+  text-decoration: underline;
+}
+button {
+  margin-top: 1rem;
+  background-color: var(--accent);
+  border: none;
+  color: #020617;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #020617;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column; /* This forces the vertical stack */
+  gap: 1rem;              /* Spacing between the rows */
+  margin-bottom: 1.5rem;  /* Space before the button */
+}
+
+.contact-list p {
+  font-size: 1.1rem;
+}
+
+.contact-list a {
+  color: var(--accent);
+  text-decoration: none;
+}
