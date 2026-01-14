@@ -81,8 +81,6 @@ section {
   padding: 2rem;
   border-radius: 12px;
   margin-bottom: 5rem;
-  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.25s ease, color 0.25s ease; */
 }
 
 .skills {
@@ -93,7 +91,6 @@ section {
 
 .skill {
   flex: 0 0 calc(33.333% - 1.5rem);
-  /* background: #334155; */
   background: #020617;
   padding: 1rem 2rem;
   border-radius: 40px;
@@ -102,12 +99,6 @@ section {
   font-weight: bold;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* background-color: #020617;
-  padding: 1rem;
-  border-radius: 25rem;
-  border-color: #38bdf8;
-  text-align: center;
-  font-weight: bold; */
 }
 
 .skill:hover {
@@ -126,12 +117,10 @@ section {
 .card-tran {
   border: 1px solid #334155;
   box-shadow: 0px 8px 8px #145976;
-  /* This makes the movement smooth */
   transition: transform 0.25s ease, color 0.25s ease;
   margin-top: 1rem;
 }
 
-/* The Hover Effect you liked */
 .card-tran:hover {
   transform: translateX(5px) translateY(-5px);
   background: var(--card-hover);
@@ -151,20 +140,7 @@ section {
   color: var(--accent);
   text-decoration: underline;
 }
-/* button {
-  margin-top: 1rem;
-  background-color: var(--accent);
-  border: none;
-  color: #020617;
-  padding: 0.7rem 1.2rem;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-} 
 
-button:hover {
-  opacity: 0.85;
-} */
 
 footer {
   text-align: center;
@@ -174,23 +150,6 @@ footer {
   opacity: 0.8;
 }
 
-/* .contact-list a {
-  font-size: 1.5rem;
-  display: inline-block; 
-  color: var(--accent);
-  text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 6px;
-
-  transition: transform 0.25s ease, filter 0.25s ease,
-    background-color 0.25s ease;
-}
-
-.contact-list a:hover {
-  transform: scale(1.1); 
-  filter: brightness(160%);
-  background-color: rgba(105, 220, 174, 0.05);
-} */
 .contact-list {
   display: flex;
   gap: 2rem;
@@ -222,3 +181,4 @@ footer {
   color: var(--accent);
   background-color: rgba(56, 189, 248, 0.08);
 }
+
