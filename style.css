@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Slab:wght@100..900&display=swap");
 
 :root {
-  --bg: #0f172a;
-  --card: #1e293b;
+  /* --bg: linear-gradient(90deg, #000328, #00458e); */
+  /* --bg: #0f172a; */
+  /* --bg: linear-gradient(90deg, #000328, #76aeea); */
+  --bg: linear-gradient(90deg, #000328, #194a7f);
+
+  /* --card: #1e293b; */
+  --card: #03274e;
   --text: #e5e7eb;
   --accent: #38bdf8;
-
   --card-hover: #233b5e;
+  --link: rgb(37, 176, 157);
 }
 
 * {
@@ -17,7 +22,7 @@
 }
 
 body {
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
@@ -30,11 +35,10 @@ header {
 header h1 {
   font-family: "Archivo Black", sans-serif;
   font-weight: 100;
-  font-style:normal;
+  font-style: normal;
   font-size: 4.5rem;
   color: var(--accent);
 }
-
 
 header p {
   margin-top: 0.5rem;
@@ -142,7 +146,6 @@ section {
   text-decoration: underline;
 }
 
-
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -183,3 +186,21 @@ footer {
   background-color: rgba(56, 189, 248, 0.08);
 }
 
+/* .projects a {
+  color: var(--link);
+}
+
+.projects a:hover {
+  color: var(--accent);
+  transform: scale(4.5);
+} */
+.projects a {
+  color: var(--link);
+  transition: filter 0.3s ease, text-decoration 0.3s ease;
+  text-decoration: none;
+}
+
+.projects a:hover {
+  filter: contrast(600%);
+  text-decoration: underline;
+}
