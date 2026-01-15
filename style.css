@@ -25,8 +25,10 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
+/* ================= HEADER ================= */
 header {
   padding: 2rem 1rem;
   text-align: center;
@@ -35,7 +37,6 @@ header {
 header h1 {
   font-family: "Archivo Black", sans-serif;
   font-weight: 100;
-  font-style: normal;
   font-size: 4.5rem;
   color: var(--accent);
 }
@@ -52,19 +53,24 @@ nav {
   gap: 1.5rem;
   margin-top: 1.5rem;
   font-size: 1.2rem;
+  flex-wrap: wrap;
+
 }
 
 nav a {
   text-decoration: none;
   color: var(--text);
   font-weight: bold;
+  transition: color 0.35s ease, border-bottom 0.25s ease;
+
 }
 
 nav a:hover {
   color: var(--accent);
-  /* text-decoration: underline double; */
   border-bottom: 2px solid var(--accent);
 }
+
+/* ================= SECTIONS ================= */
 
 section {
   max-width: 1000px;
@@ -81,12 +87,27 @@ section {
   font-family: "Roboto Slab", serif;
 }
 
+/* ================= CARDS ================= */
+
 .card {
   background-color: var(--card);
   padding: 2rem;
   border-radius: 12px;
   margin-bottom: 5rem;
 }
+
+.card h3 {
+  margin-top: 0;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.mt {
+  margin-top: 0.8rem;
+}
+
+/* ================= SKILLS ================= */
+
 
 .skills {
   display: flex;
@@ -103,7 +124,8 @@ section {
   border: 2px solid var(--accent);
   font-weight: bold;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease,
+    color 0.3s ease;
 }
 
 .skill:hover {
@@ -112,6 +134,8 @@ section {
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
 }
+
+/* ================= PROJECTS / SERVICES ================= */
 
 .projects {
   display: grid;
@@ -122,7 +146,7 @@ section {
 .card-tran {
   border: 1px solid #334155;
   box-shadow: 0px 8px 8px #145976;
-  transition: transform 0.25s ease, color 0.25s ease;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
   margin-top: 1rem;
 }
 
@@ -132,19 +156,55 @@ section {
   box-shadow: 0px 10px 25px #38bdf8;
 }
 
-.mt {
-  margin-top: 0.8rem;
+
+/* ================= LINKS ================= */
+
+.projects a {
+  color: var(--link);
+  text-decoration: none;
+  transition: filter 0.3s ease, text-decoration 0.3s ease;
 }
 
-.note {
-  margin-top: 5rem;
-}
-
-.card h3 {
-  margin-top: 0;
-  color: var(--accent);
+.projects a:hover {
+  filter: contrast(600%);
   text-decoration: underline;
 }
+
+/* ================= CONTACT ================= */
+
+.contact-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.contact-list i {
+  font-size: 1.5rem;
+}
+
+.contact-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: transform 0.25s ease, color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.contact-list a:hover {
+  transform: translateY(-4px);
+  color: var(--accent);
+  background-color: rgba(56, 189, 248, 0.08);
+}
+
+/* ================= FOOTER ================= */
+
 
 footer {
   text-align: center;
@@ -154,53 +214,71 @@ footer {
   opacity: 0.8;
 }
 
-.contact-list {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1.5rem;
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skill {
+    flex: 0 0 calc(50% - 1rem);
+  }
 }
-.contact-list i {
-  font-size: 1.5rem;
+/* Mobile */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center; /* centers each row */
+    gap: 0.5rem;
+   
+  }
+  nav a {
+    flex: 0 0 30%; /* approx 3 items per row */
+    text-align: center;
+    align-self: center;
+  }
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .skill {
+    flex: 0 0 46%;
+    margin: 0 auto; /* centers the skill box */
+    font-size: 0.85rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .contact-list {
+    gap: 1rem;
+  }
+
+  .contact-list a {
+    font-size: 0.9rem;
+  }
 }
 
-.contact-list a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 
-  color: #e5e7eb;
-  text-decoration: none;
-  font-size: 1rem;
-
-  padding: 6px 12px;
-  border-radius: 8px;
-
-  transition: transform 0.25s ease, color 0.25s ease;
-}
-
-.contact-list a:hover {
-  transform: translateY(-4px);
-  color: var(--accent);
-  background-color: rgba(56, 189, 248, 0.08);
-}
-
-/* .projects a {
-  color: var(--link);
-}
-
-.projects a:hover {
-  color: var(--accent);
-  transform: scale(4.5);
-} */
-.projects a {
-  color: var(--link);
-  transition: filter 0.3s ease, text-decoration 0.3s ease;
-  text-decoration: none;
-}
-
-.projects a:hover {
-  filter: contrast(600%);
-  text-decoration: underline;
-}
