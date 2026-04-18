@@ -126,8 +126,38 @@ nav a:hover {
   transform: translateY(-1px);
 }
 
-/* ================= SECTIONS ================= */
+/* ================= REVEALS  ================= */
 
+/* 🔒 initial hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+/* 👁 visible state */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 🔥 stagger ONLY inside projects grid */
+.projects .card-tran:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.projects .card-tran:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.projects .card-tran:nth-child(3) {
+  transition-delay: 0.15s;
+}
+.projects .card-tran:nth-child(4) {
+  transition-delay: 0.2s;
+}
+.projects .card-tran:nth-child(5) {
+  transition-delay: 0.25s;
+}
+
+/* ================= SECTIONS ================= */
 section {
   max-width: 1300px;
   margin: auto;
@@ -199,7 +229,7 @@ section {
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(255,255,255,0.45),
+    rgba(255, 255, 255, 0.45),
     transparent
   );
 
@@ -306,8 +336,8 @@ section {
 
   padding: 10px 20px;
 
-  background: rgba(255,255,255,0.25);
-  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 
   color: #0f172a;
   font-size: 0.85rem;
@@ -331,7 +361,7 @@ section {
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(255,255,255,0.6),
+    rgba(255, 255, 255, 0.6),
     transparent
   );
 
@@ -345,7 +375,7 @@ section {
 
 .project-link:hover {
   transform: translateY(-2px);
-  background: rgba(255,255,255,0.35);
+  background: rgba(255, 255, 255, 0.35);
 }
 
 /* 🔁 ANIMATION */
