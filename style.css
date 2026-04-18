@@ -1,25 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Slab:wght@100..900&display=swap");
 
 :root {
-  --bg: linear-gradient(90deg, #000328, #194a7f);
-  --card: #03274e;
-  --text: #e5e7eb;
-  --accent: #38bdf8;
-  --card-hover: #233b5e;
-  --link: rgb(37, 176, 157);
-  --dark-bg: #020617;
+  /* TEXT */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
 
-  --text: #e2e8f0;
-
-  /* GLASS COLORS */
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --glass-border: rgba(255, 255, 255, 0.12);
-
-  /* ACCENT */
-  --accent: rgb(56, 189, 248);
+  /* GLASS */
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: rgba(0, 0, 0, 0.08);
 
   /* HOVER */
-  --glass-hover: rgba(255, 255, 255, 0.1);
+  --glass-hover: rgba(255, 255, 255, 0.35);
+
+  /* ACCENT (VERY subtle, no neon) */
+  --accent: #94a3b8;
+  --accent-strong: #64748b;
+
+  /* BACKGROUND SUPPORT */
+  --section-bg: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -31,7 +30,7 @@
 }
 body {
   margin: 0;
-  color: var(--text);
+  color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
 
@@ -49,6 +48,32 @@ body::before {
   backdrop-filter: blur(2px);
 
   z-index: -1;
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 320px;
+  height: 320px;
+
+  pointer-events: none;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.35),
+    rgba(56, 189, 248, 0.15),
+    transparent 70%
+  );
+
+  filter: blur(60px);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+header,
+section,
+footer {
+  position: relative;
+  z-index: 2;
 }
 
 /* ================= HEADER ================= */
