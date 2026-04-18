@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Slab:wght@100..900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap');
 :root {
   /* TEXT */
   --text-primary: #0f172a;
@@ -83,7 +82,9 @@ header {
 }
 
 header h1 {
-  font-size: 5.6rem;
+  font-family: "Gelasio", serif;
+  font-size: 6rem;
+  font-weight: 700;
   color: #0f172a;
   text-shadow: none;
 }
@@ -93,40 +94,25 @@ header p {
   opacity: 0.9;
 }
 
-/* nav {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
-  flex-wrap: wrap;
-
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(10px);
-
-  padding: 0.6rem 1.2rem;
-  border-radius: 50px;
-  display: inline-flex;
-} */
-
 nav {
   display: flex;
   justify-content: space-evenly;
 
-  width: min(95%, 800px); /* 🔥 responsive width */
+  width: min(95%, 650px); /* 🔥 responsive width */
   margin: 1.5rem auto 0;
   flex-wrap: no-wrap;
 
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(14px);
 
-  padding: 0.9rem 1.5rem;
+  padding: 0.9rem;
   border-radius: 999px; /* fully pill */
 }
 
 nav a {
   text-decoration: none;
   color: var(--text);
+  color: #2f4f4f; /* near black */
   font-weight: bold;
   border-bottom: 2px double transparent;
   transition:
@@ -135,12 +121,10 @@ nav a {
 }
 
 nav a:hover {
-  color: #020617; /* near black */
+  color: #010b13;
   border-bottom: 2px double var(--accent-strong);
   transform: translateY(-1px);
 }
-
-
 
 /* ================= SECTIONS ================= */
 
@@ -369,6 +353,10 @@ footer {
 
   header p {
     font-size: 0.85rem;
+  }
+
+  nav {
+    padding: 0.6rem;
   }
 
   nav a {
