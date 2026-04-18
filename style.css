@@ -121,7 +121,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #010B13;
+  color: #010b13;
   border-bottom: 2px double var(--accent-strong);
   transform: translateY(-1px);
 }
@@ -285,6 +285,7 @@ section {
   transform: translateY(-2px);
 }
 
+
 /* ================= CONTACT ================= */
 
 .contact-list {
@@ -326,7 +327,7 @@ footer {
   padding: 2rem 1rem;
   background-color: #020617;
   font-size: 0.9rem;
-  color:#F5F5F5;
+  color: #f5f5f5;
   opacity: 0.8;
 }
 
