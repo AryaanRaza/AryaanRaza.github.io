@@ -283,78 +283,81 @@ section {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* =================PROJECT LINKS ================= */
+/* ================= PROJECT LINKS ================= */
 .project-links {
   margin-top: auto;
   padding-top: 1rem;
   display: flex;
   justify-content: center;
 }
-.project-link i {
-  font-size: 1.2rem;
-}
 
 .project-link {
   position: relative;
-  overflow: hidden;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
+  padding: 12px 25px; /* Slightly adjusted for the new style */
 
-  padding: 10px 20px;
-
-  background: rgba(255,255,255,0.25);
-  border: 1px solid rgba(255,255,255,0.35);
-
+  /* Your original aesthetic */
+  background: rgba(255, 255, 255, 0.9); /* Increased opacity for the pop effect */
+  border: 1px solid rgba(255, 255, 255, 0.35);
   color: #0f172a;
   font-size: 0.85rem;
   font-weight: 600;
-
-  border-radius: 10px;
+  text-transform: uppercase;
   text-decoration: none;
-
-  transition: all 0.25s ease;
+  border-radius: 100px; /* Pill shape from the new style */
+  
+  transition: all 0.2s;
 }
 
-/* ✨ SHIMMER LAYER */
+/* 🖱 HOVER EFFECTS */
+.project-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background: #fff;
+}
+
+.project-link:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ✨ THE EXPANDING BACKGROUND EFFECT */
 .project-link::after {
   content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
   position: absolute;
   top: 0;
-  left: -120%;
-  width: 60%;
-  height: 100%;
-
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.6),
-    transparent
-  );
-
-  transform: skewX(-20deg);
+  left: 0;
+  z-index: -1;
+  background-color: #fff;
+  transition: all 0.4s;
 }
 
-/* 🖱 HOVER */
 .project-link:hover::after {
-  animation: shimmer 1.5s linear infinite;
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 
-.project-link:hover {
-  transform: translateY(-2px);
-  background: rgba(255,255,255,0.35);
+/* 🔁 ENTRANCE ANIMATION */
+.btn-animated {
+  animation: moveInBottom 0.8s ease-out 0.2s; /* Faster than 5s for better UX */
+  animation-fill-mode: backwards;
 }
 
-/* 🔁 ANIMATION */
-@keyframes shimmer {
-  from {
-    left: -120%;
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  to {
-    left: 140%;
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
