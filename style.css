@@ -10,7 +10,7 @@
   --glass-shadow: rgba(0, 0, 0, 0.08);
 
   /* HOVER */
-  --glass-hover: rgba(255, 255, 255, 0.35);
+  --glass-hover: rgba(255, 255, 255, 0.4);
 
   /* ACCENT (VERY subtle, no neon) */
   --accent: #94a3b8;
@@ -300,7 +300,7 @@ section {
   padding: 12px 25px; /* Slightly adjusted for the new style */
 
   /* Your original aesthetic */
-  background: rgba(255, 255, 255, 0.9); /* Increased opacity for the pop effect */
+  background: rgba(255, 255, 255, 0.382); /* Increased opacity for the pop effect */
   border: 1px solid rgba(255, 255, 255, 0.35);
   color: #0f172a;
   font-size: 0.85rem;
@@ -335,7 +335,7 @@ section {
   top: 0;
   left: 0;
   z-index: -1;
-  background-color: #fff;
+  background-color: #ffffffa7;
   transition: all 0.4s;
 }
 
