@@ -15,7 +15,8 @@
   --glass-shadow: rgba(0, 0, 0, 0.08);
 
   /* ================= HOVER ================= */
-  --glass-hover: rgba(255, 255, 255, 0.32);
+  --glass-hover-skill: rgba(255, 255, 255, 0.5);
+  --glass-hover-card: rgba(255, 255, 255, 0.4);
 
   /* ================= ACCENT ================= */
   --accent: #94a3b8;
@@ -271,7 +272,7 @@ section {
 
 .card-tran:hover {
   transform: translateY(-6px) scale(1.01);
-  background: var(--glass-hover);
+  background: var(--glass-hover-card);
   border-color: var(--accent);
   filter: brightness(1.05);
 }
@@ -292,7 +293,7 @@ section {
 }
 
 .mt {
-  margin-top: 0.8rem;
+  margin-top: var(--space-sm);
 }
 
 /* ================= SKILLS ================= */
@@ -327,13 +328,13 @@ section {
 }
 
 .skill:hover {
-  background: var(--glass-hover);
+  background: var(--glass-hover-skill);
   color: var(--text-primary);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transform: translateY(-4px);
 }
 
-/* ================= PROJECTS / SERVICES ================= */
+/* ================= PROJECTS  ================= */
 
 .projects {
   display: grid;
