@@ -2,15 +2,15 @@
 :root {
   /* ================= TEXT ================= */
   /* --text-primary: #0f172a;      */
-   --text-primary: #2A3439;     /* nav a hover , section title */
-   --text-secondary: #475569;   /* paragraphs,nav a */
-  --text-dark: #0f172a;       /* header h1 */
+  --text-primary: #2a3439; /* nav a hover , section title */
+  --text-secondary:  #334155; /* paragraphs,nav a */
+  --text-dark: #0f172a; /* header h1 */
 
   /* --text-dark-header: #0f172a;    card h3    */
-  --text-dark-header: #2c383f;       
+  --text-dark-header: #2c383f;
 
   /* ================= GLASS ================= */
-  --glass-bg: rgba(255, 255, 255, 0.22);
+  --glass-bg: rgba(255, 255, 255, 0.45);
   --glass-bg-strong: rgba(255, 255, 255, 0.35);
   --glass-border: rgba(255, 255, 255, 0.35);
   --glass-border-soft: rgba(255, 255, 255, 0.2);
@@ -18,7 +18,7 @@
 
   /* ================= HOVER ================= */
   --glass-hover-skill: rgba(255, 255, 255, 0.5);
-  --glass-hover-card: rgba(255, 255, 255, 0.4);
+  --glass-hover-card: rgba(255, 255, 255, 0.65);
 
   /* ================= ACCENT ================= */
   --accent: #94a3b8;
@@ -31,10 +31,10 @@
   --navigation-bg: rgba(255, 255, 255, 0.25);
   --footer-bg: rgb(2, 6, 23);
 
-    /* ================= SHADOW ================= */
+  /* ================= SHADOW ================= */
   --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.08);
-  --shadow-card:  0 8px 30px rgba(0, 0, 0, 0.25);
-  --shadow-card-tran:   0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --shadow-card-tran: 0 10px 25px rgba(0, 0, 0, 0.08);
 
   /* ================= RADIUS ================= */
   --radius-sm: 6px;
@@ -68,7 +68,7 @@ body {
 
   background: url("img/bg.png") no-repeat center;
   background-size: cover;
-  background-attachment: fixed; /* 🔥 THIS is the key */
+  background-attachment: fixed;
 }
 
 body::before {
@@ -145,7 +145,7 @@ nav {
 nav a {
   text-decoration: none;
   color: var(--text-secondary);
-  
+
   font-weight: bold;
   border-bottom: 2px double transparent;
   transition:
@@ -206,11 +206,12 @@ section {
   color: var(--text-primary);
   font-family: "Roboto Slab", serif;
   display: inline-block;
-  padding-bottom : var(--space-xs);
+  padding-bottom: var(--space-xs);
 }
 
 /* ================= CARDS ================= */
-.card {
+.card 
+,.card-tran{
   background: var(--glass-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -221,13 +222,13 @@ section {
   padding: var(--space-lg);
   margin-bottom: var(--space-2xl);
 
-  box-shadow:var(--shadow-card);
+  box-shadow: var(--shadow-card);
 }
 
 .card p {
   font-size: 1.2rem;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg);
   color: var(--text-secondary);
 }
 .card-tran {
@@ -237,15 +238,8 @@ section {
   display: flex;
   flex-direction: column;
 
-  background: rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  border: 1px solid rgba(255, 255, 255, 0.508);
-  border-radius: var(--radius-lg);
-
   box-shadow: var(--shadow-card-tran);
-
+  filter: brightness(1.05);
   transition: all 0.3s ease;
 }
 
@@ -260,7 +254,7 @@ section {
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0.65),
     transparent
   );
 
@@ -275,7 +269,7 @@ section {
   transform: translateY(-6px) scale(1.01);
   background: var(--glass-hover-card);
   border-color: var(--accent);
-  filter: brightness(1.05);
+  filter: brightness(1.1);
 }
 @keyframes cardShimmer {
   from {
@@ -325,7 +319,7 @@ section {
 
   backdrop-filter: blur(8px);
 
-  border-radius: var(--radius-xxl);;
+  border-radius: var(--radius-xxl);
 }
 
 .skill:hover {
