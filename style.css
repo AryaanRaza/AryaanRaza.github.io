@@ -538,3 +538,20 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+.tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  margin-left: var(--space-sm);
+
+  border-radius: var(--radius-pill);
+
+  background: var(--accent-soft);
+  color: var(--text-secondary);
+
+  border: 1px solid var(--glass-border-soft);
+
+  backdrop-filter: blur(6px);
+
+  transition: all 0.25s ease;
+}
