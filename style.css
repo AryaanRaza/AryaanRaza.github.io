@@ -555,3 +555,28 @@ footer {
 
   transition: all 0.25s ease;
 }
+.project-tech {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+
+.tech {
+  font-size: 12px;
+  padding: 4px 10px;
+
+  border-radius: var(--radius-pill);
+
+  background: var(--section-bg);
+  color: var(--text-secondary);
+
+  border: 1px solid var(--glass-border-soft);
+
+  transition: all 0.25s ease;
+}
+
+.tech:hover {
+  background: var(--glass-hover-skill);
+  color: var(--text-primary);
+}
