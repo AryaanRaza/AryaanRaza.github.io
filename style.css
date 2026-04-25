@@ -17,7 +17,7 @@
   --glass-shadow: rgba(0, 0, 0, 0.08);
 
   /* ================= HOVER ================= */
-  --glass-hover-skill: rgba(255, 255, 255, 0.5);
+  --glass-hover-skill: rgba(255, 255, 255, 0.8);
   --glass-hover-card: rgba(255, 255, 255, 0.65);
 
   /* ================= ACCENT ================= */
@@ -26,6 +26,7 @@
   --accent-soft: rgba(148, 163, 184, 0.2);
 
   /* ================= BACKGROUND ================= */
+  --skill-bg: rgba(255, 255, 255, 0.48);
   --section-bg: rgba(255, 255, 255, 0.08);
   --overlay-bg: rgba(255, 255, 255, 0.15);
   --navigation-bg: rgba(255, 255, 255, 0.25);
@@ -318,7 +319,7 @@ section {
     background 0.3s ease,
     color 0.3s ease;
 
-  background: var(--section-bg);
+  background: var(--skill-bg);
   border: 1px solid rgba(255, 255, 255, 0.1);
 
   backdrop-filter: blur(8px);
