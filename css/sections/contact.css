@@ -1,0 +1,33 @@
+/* ================= CONTACT ================= */
+
+.contact-list {
+  display: flex;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.contact-list i {
+  font-size: 1.5rem;
+}
+
+.contact-list a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.contact-list a:hover {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

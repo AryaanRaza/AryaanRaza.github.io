@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap");
+
+@import url("base/variables.css");
+@import url("base/reset.css");
+@import url("base/background.css");
+
+@import url("layout/header.css");
+@import url("layout/sections.css");
+@import url("layout/footer.css");
+
+@import url("components/button.css");
+@import url("components/navigation.css");
+@import url("components/cards.css");
+
+@import url("sections/skils.css");
+@import url("sections/projects.css");
+@import url("sections/contact.css");
+
+@import url("animation/reveal.css");
+@import url("animation/hover.css");
+
+@import url("responsive.css");

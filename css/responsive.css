@@ -1,0 +1,79 @@
+
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 4rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skill {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+/* Mobile */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2.7rem;
+  }
+
+  header p {
+    font-size: 0.85rem;
+  }
+
+  nav {
+    padding: 0.6rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+  .card {
+    padding: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+  .project-link {
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    padding: 8px 8px;
+  }
+  .project-link i {
+    font-size: 0.6rem;
+  }
+
+  .skill {
+    flex: 0 0 46%;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .contact-list {
+    gap: 1rem;
+  }
+
+  .contact-list a {
+    font-size: 0.9rem;
+  }
+}
+

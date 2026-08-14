@@ -1,0 +1,54 @@
+:root {
+  /* ================= TEXT ================= */
+  /* --text-primary: #0f172a;      */
+  --text-primary: #2a3439; /* nav a hover , section title */
+  --text-secondary:  #334155; /* paragraphs,nav a */
+  --text-dark: #0f172a; /* header h1 */
+
+  /* --text-dark-header: #0f172a;    card h3    */
+  --text-dark-header: #2c383f;
+
+  /* ================= GLASS ================= */
+  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-bg-strong: rgba(255, 255, 255, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.35);
+  --glass-border-soft: rgba(255, 255, 255, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.08);
+
+  /* ================= HOVER ================= */
+  --glass-hover-skill: rgba(255, 255, 255, 0.8);
+  --glass-hover-card: rgba(255, 255, 255, 0.65);
+
+  /* ================= ACCENT ================= */
+  --accent: #94a3b8;
+  --accent-strong: #64748b;
+  --accent-soft: rgba(148, 163, 184, 0.2);
+
+  /* ================= BACKGROUND ================= */
+  --skill-bg: rgba(255, 255, 255, 0.48);
+  --section-bg: rgba(255, 255, 255, 0.08);
+  --overlay-bg: rgba(255, 255, 255, 0.15);
+  --navigation-bg: rgba(255, 255, 255, 0.25);
+  --footer-bg: rgb(2, 6, 23);
+
+  /* ================= SHADOW ================= */
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --shadow-card-tran: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  /* ================= RADIUS ================= */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-xxl: 50px;
+  --radius-pill: 999px;
+
+  /* ================= SPACING ================= */
+  --space-xs: 6px;
+  --space-sm: 10px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+}
