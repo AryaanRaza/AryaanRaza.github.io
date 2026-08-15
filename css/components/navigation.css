@@ -1,0 +1,32 @@
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: min(95%, 650px); /* 🔥 responsive width */
+  margin: var(--space-xl) auto 0;
+  flex-wrap: no-wrap;
+
+  background: var(--navigation-bg);
+  backdrop-filter: blur(14px);
+
+  padding: var(--space-sm);
+  border-radius: var(--radius-pill); /* fully pill */
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+
+  font-weight: bold;
+  border-bottom: 2px double transparent;
+  transition:
+    color 0.35s ease,
+    border-bottom 0.25s ease;
+}
+
+nav a:hover {
+  color: var(--text-primary);
+  border-bottom: 2px double var(--accent-strong);
+  transform: translateY(-1px);
+}

@@ -1,0 +1,82 @@
+
+/* ================= CARDS ================= */
+.card 
+,.card-tran{
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+
+  padding: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+
+  box-shadow: var(--shadow-card);
+}
+
+.card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+  color: var(--text-secondary);
+}
+.card-tran {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: var(--shadow-card-tran);
+  filter: brightness(1.05);
+  transition: all 0.3s ease;
+}
+
+.card-tran::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.65),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+}
+
+.card-tran:hover::after {
+  animation: cardShimmer 0.9s ease;
+}
+
+.card-tran:hover {
+  transform: translateY(-6px) scale(1.01);
+  background: var(--glass-hover-card);
+  border-color: var(--accent);
+  filter: brightness(1.1);
+}
+@keyframes cardShimmer {
+  from {
+    left: -120%;
+  }
+  to {
+    left: 140%;
+  }
+}
+.card-tran h3 {
+  color: #2c383f;
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin-bottom: var(--space-xl);
+  line-height: 1.3;
+}
+
+.mt {
+  margin-top: var(--space-sm);
+}

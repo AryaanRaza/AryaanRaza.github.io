@@ -1,0 +1,26 @@
+
+/* ================= SECTIONS ================= */
+section {
+  max-width: 1300px;
+  margin: auto;
+  padding: var(--space-xl) var(--space-md);
+  scroll-margin-top: var(--space-xl);
+  background: var(--section-bg);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius-lg);
+}
+
+.section-title {
+  font-size: 3.6rem;
+  color: var(--text-primary);
+  font-family: "Roboto Slab", serif;
+  display: inline-block;
+  padding-bottom: var(--space-xs);
+}
+
+header,
+section,
+footer {
+  position: relative;
+  z-index: 2;
+}

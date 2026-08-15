@@ -1,0 +1,29 @@
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.hero-btn {
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-btn.primary {
+  background: #172033;
+  color: white;
+}
+
+.hero-btn.secondary {
+  background: rgba(255, 255, 255, 0.55);
+  color: #172033;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+}

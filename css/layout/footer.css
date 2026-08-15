@@ -1,0 +1,10 @@
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  padding: var(--space-lg) var(--space-sm);
+  background-color: var(--footer-bg);
+  font-size: 0.9rem;
+  color: #f5f5f5;
+  opacity: 0.8;
+}
